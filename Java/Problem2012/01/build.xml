@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="Problem2012-01" default="all" basedir=".">
+  <property name="src.dir" value="src"/>
+  <property name="bin.dir" value="bin"/>
+  <property name="jar.name" value="Problem2012-01.jar"/>
+  <property name="main.class" value="ListByUsingArray"/>
+
+  <target name="all" depends="build.jar"/>
+
+  <!-- make Jar-file -->
+  <target name="build.jar" depends="build.class">
+    <jar jarfile="${jar.name}">
+      <fileset dir="${bin.dir}"/>
+      <manifest>
+        <attribute name="Main-Class" value="${main.class}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <!-- Compile Java files -->
+  <target name="build.class">
+    <mkdir dir="${bin.dir}"/>
+    <javac srcdir="${src.dir}" destdir="${bin.dir}" encoding="utf-8" includeantruntime="false"/>
+  </target>
+
+  <!-- Clean-up Objects -->
+  <target name="clean">
+    <delete file="${jar.name}"/>
+    <delete>
+      <fileset dir="${bin.dir}" includes="*.class"/>
+    </delete>
+  </target>
+  <target name="objclean">
+    <delete>
+      <fileset dir="${bin.dir}" includes="*.class"/>
+    </delete>
+  </target>
+</project>

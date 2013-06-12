@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="BuildAll" default="all" basedir=".">
+  <property name="dir01" value="Problem2007"/>
+  <property name="dir02" value="Problem2007haru"/>
+  <property name="dir03" value="Problem2008haru"/>
+  <property name="dir04" value="Problem2009/01"/>
+  <property name="dir05" value="Problem2009/02"/>
+  <property name="dir06" value="Problem2010"/>
+  <property name="dir07" value="Problem2011"/>
+  <property name="dir08" value="Problem2012/01"/>
+  <property name="dir09" value="Problem2012/02"/>
+  <property name="dir10" value="Problem2012haru"/>
+
+  <target name="all" depends="build.sub"/>
+
+  <!-- Execute ant in sub-directory -->
+  <target name="build.sub">
+    <ant antfile="${dir01}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir02}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir03}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir04}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir05}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir06}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir07}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir08}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir09}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir10}/build.xml" inheritAll="false" target="all"/>
+  </target>
+
+  <!-- Clean-up -->
+  <target name="clean">
+    <ant antfile="${dir01}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir02}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir03}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir04}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir05}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir06}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir07}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir08}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir09}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir10}/build.xml" inheritAll="false" target="clean"/>
+  </target>
+  <target name="objclean">
+    <ant antfile="${dir01}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir02}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir03}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir04}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir05}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir06}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir07}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir08}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir09}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir10}/build.xml" inheritAll="false" target="objclean"/>
+  </target>
+</project>
