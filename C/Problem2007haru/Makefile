@@ -10,10 +10,12 @@ SRC     = $(addprefix src/, $(addsuffix .c, $(basename $(TARGET))))
 ifeq ($(OS),Windows_NT)
     TARGET := $(addsuffix .exe, $(TARGET))
     CFLAGS += -finput-charset=utf-8 -fexec-charset=cp932
+else
+    TARGET := $(addsuffix .out, $(TARGET))
 endif
 
 
-%.exe :
+%.exe %.out :
 	$(CC) $(LDFLAGS) $(filter %.c %.o, $^) $(LDLIBS) -o $@
 
 %.o :

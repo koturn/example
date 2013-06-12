@@ -14,10 +14,13 @@ ifeq ($(OS),Windows_NT)
     TARGET1 := $(addsuffix .exe, $(TARGET1))
     TARGET2 := $(addsuffix .exe, $(TARGET2))
     CFLAGS  += -finput-charset=utf-8 -fexec-charset=cp932
+else
+    TARGET1 := $(addsuffix .out, $(TARGET1))
+    TARGET2 := $(addsuffix .out, $(TARGET2))
 endif
 
 
-%.exe :
+%.exe %.out :
 	$(CC) $(LDFLAGS) $(filter %.c %.o, $^) $(LDLIBS) -o $@
 
 %.o :
