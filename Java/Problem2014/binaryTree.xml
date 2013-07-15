@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<root>
+  <left>
+    <value>6</value>
+    <left>
+      <value>4</value>
+      <left>
+        <value>2</value>
+      </left>
+      <right>
+        <value>5</value>
+      </right>
+    </left>
+    <right>
+      <value>10</value>
+      <left>
+        <value>7</value>
+      </left>
+    </right>
+  </left>
+</root>

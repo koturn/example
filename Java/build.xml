@@ -11,6 +11,7 @@
   <property name="dir08" value="Problem2012/01"/>
   <property name="dir09" value="Problem2012/02"/>
   <property name="dir10" value="Problem2012haru"/>
+  <property name="dir11" value="Problem2014"/>
 
   <target name="all" depends="build.sub"/>
 
@@ -26,6 +27,7 @@
     <ant antfile="${dir08}/build.xml" inheritAll="false" target="all"/>
     <ant antfile="${dir09}/build.xml" inheritAll="false" target="all"/>
     <ant antfile="${dir10}/build.xml" inheritAll="false" target="all"/>
+    <ant antfile="${dir11}/build.xml" inheritAll="false" target="all"/>
   </target>
 
   <!-- Clean-up -->
@@ -40,6 +42,7 @@
     <ant antfile="${dir08}/build.xml" inheritAll="false" target="clean"/>
     <ant antfile="${dir09}/build.xml" inheritAll="false" target="clean"/>
     <ant antfile="${dir10}/build.xml" inheritAll="false" target="clean"/>
+    <ant antfile="${dir11}/build.xml" inheritAll="false" target="clean"/>
   </target>
   <target name="objclean">
     <ant antfile="${dir01}/build.xml" inheritAll="false" target="objclean"/>
@@ -52,5 +55,6 @@
     <ant antfile="${dir08}/build.xml" inheritAll="false" target="objclean"/>
     <ant antfile="${dir09}/build.xml" inheritAll="false" target="objclean"/>
     <ant antfile="${dir10}/build.xml" inheritAll="false" target="objclean"/>
+    <ant antfile="${dir11}/build.xml" inheritAll="false" target="objclean"/>
   </target>
 </project>
